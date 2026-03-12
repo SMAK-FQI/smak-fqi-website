@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SMA Fides Quaerens Intellectum</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="shortcut icon" href="logo.png" type="image/x-icon"/>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="menu-kiri">
+
+<a href="index.html">BERANDA</a>
+<a href="profil.html">PROFIL</a>
+<a href="guru.html">GURU</a>
+
+</div>
+
+<div class="logo-tengah">
+
+<img src="logo.png">
+
+</div>
+
+<div class="menu-kanan">
+
+<a href="galeri.html">GALERI</a>
+<a href="informasi.html">INFORMASI</a>
+<a href="kontak.html" class="active">KONTAK</a>
+
+</div>
+
+</header>
+
+<div class="nama-sekolah">
+<h1>SMA KATOLIK FIDES QUAERENS INTELLECTUM</h1>
+</div>
+
+<div class="running-text">
+<div class="running-track">
+
+<span>Selamat datang di Website Resmi SMA Katolik Fides Quaerens Intellectum •</span>
+<span>Selamat datang di Website Resmi SMA Katolik Fides Quaerens Intellectum •</span>
+<span>Selamat datang di Website Resmi SMA Katolik Fides Quaerens Intellectum •</span>
+<span>Selamat datang di Website Resmi SMA Katolik Fides Quaerens Intellectum •</span>
+
+</div>
+</div>
+
+
+<section class="container">
+
+<h1>Kontak Sekolah</h1>
+
+<p><b>Nama Sekolah:</b> SMA Fides Quaerens Intellectum</p>
+
+<p><b>Alamat:</b> Jl.Eltari, km 7, Sasi, Kefamenanu, TTU</p>
+
+<p><b>Provinsi:</b> Nusa Tenggara Timur</p>
+
+<p><b>Email:</b> <a href="mailto:fideskefa12@gmail.com">fideskefa12@gmail.com</a></p>
+
+<p><b>Telepon:</b> -</p>
+
+</section>
+
+
+<section class="container">
+
+<h2>Lokasi Sekolah</h2>
+
+<iframe
+src="https://www.google.com/maps?q=SMA+Katolik+Fides+Quaerens+Intellectum+Kefamenanu&output=embed"
+width="100%"
+height="300"
+style="border:0;"
+loading="lazy">
+</iframe>
+
+</section>
+
+<section class="container">
+
+<h2>Pesan Pengunjung</h2>
+
+<div class="chat-box">
+
+<div id="chatMessages" class="chat-messages"></div>
+
+<div class="chat-input">
+
+<input type="text" id="namaPengunjung" placeholder="Nama Anda">
+
+<textarea id="pesanPengunjung" placeholder="Tulis pesan..."></textarea>
+
+<button onclick="kirimPesan()">Kirim</button>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="logobawah">
+<img src="logo.png">
+</div>
+
+<div class="social-media">
+
+<a href="https://www.youtube.com/@smakfidesquaerensintellect7684" target="_blank">YouTube</a>
+
+<a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=o010txj" target="_blank">Instagram</a>
+
+<a href="https://tiktok.com/@namatiktoksekolah" target="_blank">TikTok</a>
+
+<a href="https://www.facebook.com/profile.php?id=100095247018770&mibextid=rS40aB7S9Ucbxw6v" target="_blank">Facebook</a>
+
+<a href="mailto:fideskefa12@gmail.com" target="_blank">Email</a>
+
+</div>
+
+<p>© 2026 SMA Katolik Fides Quaerens Intellectum</p>
+
+</footer>
+
+<script>
+
+function kirimPesan(){
+
+let nama = document.getElementById("namaPengunjung").value;
+let pesan = document.getElementById("pesanPengunjung").value;
+
+if(nama === "" || pesan === ""){
+alert("Silakan isi nama dan pesan terlebih dahulu");
+return;
+}
+
+let chatBox = document.getElementById("chatMessages");
+
+let pesanBaru = document.createElement("div");
+pesanBaru.className = "chat-message";
+
+pesanBaru.innerHTML = "<b>" + nama + "</b><br>" + pesan;
+
+chatBox.prepend(pesanBaru);
+
+document.getElementById("pesanPengunjung").value = "";
+
+}
+
+</script>
+
+</body>
+
+</html>
